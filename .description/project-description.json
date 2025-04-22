@@ -1,0 +1,71 @@
+{
+    "project_name": "Test-Time Scaling Demo",
+    "description": "A Jupyter notebook-based project demonstrating the implementation and evaluation of test-time scaling strategies on a classification dataset.",
+    "structure": {
+      "folders": {
+        "data": {
+          "raw": "Original unprocessed dataset files",
+          "processed": "Cleaned and scaled versions of datasets for training and testing"
+        },
+        "notebooks": {
+          "01_data_preparation.ipynb": "Load, clean, and explore dataset; split into train/test sets",
+          "02_model_training.ipynb": "Train baseline ML model using standard training-time scaling",
+          "03_test_time_scaling.ipynb": "Apply and compare various test-time scaling techniques",
+          "04_evaluation.ipynb": "Evaluate performance and visualize comparison metrics"
+        },
+        "utils": {
+          "preprocessing.py": "Reusable data processing and scaling utility functions"
+        }
+      },
+      "files": {
+        "requirements.txt": "Python dependencies for project reproducibility",
+        "README.md": "Overview, setup instructions, and documentation",
+        ".gitignore": "Ignore virtual environment, checkpoints, and data files"
+      }
+    },
+    "dependencies": [
+      "numpy",
+      "pandas",
+      "scikit-learn",
+      "matplotlib",
+      "seaborn",
+      "jupyter"
+    ],
+    "workflow_steps": [
+      {
+        "step": "Environment Setup",
+        "details": "Create virtual environment, install dependencies, initialize git"
+      },
+      {
+        "step": "Data Preparation",
+        "details": "Load raw data, clean, perform EDA, and save preprocessed files"
+      },
+      {
+        "step": "Model Training",
+        "details": "Scale training data, train baseline model, and save the model"
+      },
+      {
+        "step": "Test-Time Scaling",
+        "details": "Experiment with different test-time scaling methods and apply them to test data"
+      },
+      {
+        "step": "Evaluation",
+        "details": "Measure accuracy, F1 score, visualize confusion matrix and ROC curves for comparisons"
+      }
+    ],
+    "scaling_methods": [
+      "StandardScaler (train-time)",
+      "QuantileTransformer",
+      "RobustScaler",
+      "Z-score normalization (test-only, for demo)",
+      "MinMaxScaler"
+    ],
+    "best_practices": [
+      "Use only training data for scaling during training",
+      "Avoid data leakage by not scaling test data based on itself in real scenarios",
+      "Use utility modules to avoid code duplication",
+      "Store intermediate outputs to save time in re-runs",
+      "Document each notebook with clear markdown and code separation"
+    ]
+  }
+  
