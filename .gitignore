@@ -1,0 +1,33 @@
+# Python virtual environment
+venv/
+env/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Data files (if needed, modify based on your data policy)
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Model files
+*.pkl
+*.h5
+
+# IDE specific files
+.vscode/
+.idea/
+*.swp
+*.swo
